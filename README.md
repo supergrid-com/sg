@@ -9,15 +9,27 @@ New base for the product formerly called SuperAtlas. Home: supergrid.com.
 
 ## Docs
 
-- [SUPERGRID.md](SUPERGRID.md): product, thesis, areas to build, open questions.
-- [BUSINESS-MODEL.md](BUSINESS-MODEL.md): license, pricing, monetization.
-- [TENANCY.md](TENANCY.md): accounts, workspaces, sites, hosts, open-core split.
-
-These were copied from `superatlas-app` on 2026-10-29 with the name swapped. The originals there are untouched; the hackathon build still lives in that folder.
+Planning, discovery and reasoning docs live in `private/`, which is gitignored and never committed. Public docs for each part live next to the code in that part's folder.
 
 ## Folders
 
 - `marketing/`: supergrid.com
-- `operator/`: the control plane (operator software, see TENANCY.md §6)
-- `workspace/`: the workspace template that is forked per workspace (TENANCY.md §8)
+- `operator/`: the control plane, the operator software that runs many workspaces
+- `workspace/`: the workspace template, forked once per workspace and then owned by its owner
 - `dev/`: local dev bridge and tooling
+
+## Licensing
+
+This repository is source-available. The default license is the Functional Source License, [FSL-1.1-MIT](LICENSE.md): use it, modify it, self-host it, build for clients with it. Offering it as a competing hosted product needs an operator license. Each version becomes MIT two years after release.
+
+Directories override the default where they say so:
+
+| Path | License |
+|---|---|
+| Root, `workspace/`, `operator/`, `dev/` | FSL-1.1-MIT |
+| SDK and plugin API packages (each carries its own file) | MIT |
+| `marketing/` code | FSL-1.1-MIT |
+| `marketing/` content: brand, copy, graphics, video | All rights reserved |
+| The SuperGrid name and logo | Not licensed, see [TRADEMARK.md](TRADEMARK.md) |
+
+Signup, plans, billing, metering, the operator host and the partner console are developed outside this repository under a commercial license.

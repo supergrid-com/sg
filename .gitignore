@@ -1,0 +1,43 @@
+# Secrets: never commit these. Use .env.example for documented defaults.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
+
+# Dependencies and builds
+node_modules/
+dist/
+build/
+.output/
+.next/
+.astro/
+.turbo/
+.wrangler/
+*.tsbuildinfo
+
+# Tooling
+.cache/
+coverage/
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# OS and editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# Large media: keep source video and raw exports out of git history (host on R2 or use LFS)
+marketing/video/raw/
+marketing/video/exports/
+*.mov
+*.mp4
+
+# Private planning, discovery and reasoning docs. Never committed.
+private/
